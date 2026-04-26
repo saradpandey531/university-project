@@ -1,5 +1,5 @@
 {
-  "homepage": "https://saradpandey531.github.io/university-project"
+  "homepage": "https://saradpandey531.github.io/university-project",
   "name": "project",
   "private": true,
   "version": "0.0.0",
@@ -7,8 +7,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap-icons": "^1.13.1",
@@ -27,6 +29,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
-    "vite": "^8.0.4"
+    "vite": "^8.0.4",
+    "gh-pages": "^6.1.1"
   }
 }
