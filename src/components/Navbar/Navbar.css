@@ -1,0 +1,159 @@
+/* MAIN NAV */
+.navbar {
+  width: 100%;
+  padding: 10px 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background: transparent;
+  transition: 0.4s;
+}
+
+.dark_nav {
+  background: #ADD8E6;
+}
+
+.logo {
+  width: 160px;
+}
+
+/* DESKTOP MENU */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn {
+  color: #ffffff;
+background: #212EA0;
+  font-weight: 600;
+  font-size: 20px;
+  height: 50px;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+/* MENU ICON (hidden in desktop) */
+.menu_icon {
+  width: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+/* OFFCANVAS */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background: #0a192f;
+  display: flex;
+  flex-direction: column;
+  padding: 70px 30px;
+  gap: 25px;
+  transition: 0.4s;
+  z-index: 200;
+}
+
+.offcanvas a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.offcanvas.open {
+  right: 0;
+}
+
+.close_btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.nav-links li,
+.nav-links li a {
+  color: white;
+}
+
+/* OFFCANVAS text already white, but enforce it */
+.offcanvas a {
+  color: white !important;
+}
+
+/* optional: make hover also white (no color change glitch) */
+.nav-links li a:hover,
+.offcanvas a:hover {
+  color: #fff;
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+  /* hide desktop menu */
+  .nav-links {
+    display: none;
+  }
+
+  /* show menu icon */
+  .menu_icon {
+    display: block;
+  }
+
+  /* offcanvas centered mobile menu */
+  .offcanvas {
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+  }
+
+  .offcanvas a {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .offcanvas {
+    right: -100%;
+  }
+
+  .offcanvas.open {
+    right: 0;
+  }
+}
+
+/* extra small devices */
+@media (max-width: 480px) {
+
+  .offcanvas {
+    width: 220px;
+    padding: 70px 15px;
+  }
+
+  .offcanvas a {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .menu_icon {
+    width: 30px;
+  }
+}

@@ -1,0 +1,73 @@
+.footer {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #797979;
+  padding: 15px 0;
+  width: 90%;
+  flex-wrap: wrap; /* important for responsiveness */
+}
+
+/* LEFT TEXT (if any paragraph exists) */
+.footer p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* LINKS */
+.footer ul {
+  padding: 0;
+  margin: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+/* LINKS STYLE (optional but better UX) */
+.footer ul li a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.footer ul li a:hover {
+  color: #0a192f;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer ul {
+    justify-content: center;
+  }
+
+  .footer ul li {
+    margin: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer ul li {
+    margin: 6px 0;
+  }
+}

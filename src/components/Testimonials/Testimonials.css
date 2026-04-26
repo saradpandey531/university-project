@@ -1,0 +1,164 @@
+.testimonials {
+    margin: 80px auto;
+    width: 90%;
+    position: relative;
+}
+
+/* CARD */
+.slide {
+    background: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 12px;
+    min-height: 250px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* USER */
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-info img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 3px solid blue;
+}
+
+.user-info h3 {
+    margin: 0;
+}
+
+.user-info span {
+    font-size: 13px;
+    color: gray;
+}
+
+/* 🔵 BUTTONS (DEFAULT DESKTOP) */
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    background: blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.custom-prev {
+    left: -80px;
+}
+
+.custom-next {
+    right: -80px;
+}
+
+/* ICON */
+.custom-prev img,
+.custom-next img {
+    width: 30px;
+    height: 30px;
+}
+
+/* HOVER */
+.custom-prev:hover,
+.custom-next:hover {
+    background: darkblue;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* TABLET size */
+
+@media (max-width: 992px) {
+
+    .custom-prev,
+    .custom-next {
+        width: 55px;
+        height: 55px;
+    }
+
+    .custom-prev {
+        left: -40px;
+    }
+
+    .custom-next {
+        right: -40px;
+    }
+
+    .custom-prev img,
+    .custom-next img {
+        width: 22px;
+        height: 22px;
+    }
+
+    .user-info img {
+        width: 65px;
+        height: 65px;
+    }
+}
+
+/* MOBILE size */
+
+@media (max-width: 600px) {
+
+    .testimonials {
+        width: 95%;
+        overflow: hidden; 
+    }
+
+    /* ONE SLIDE LOOK */
+    .slide {
+        padding: 20px;
+        min-height: auto;
+    }
+
+    /* USER CENTER */
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .user-info img {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 60px;
+        height: 60px;
+    }
+
+    /*  ARROWS INSIDE */
+    .custom-prev,
+    .custom-next {
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: blue;
+    }
+
+    .custom-prev {
+        left: 10px;   /* inside */
+    }
+
+    .custom-next {
+        right: 10px;  /* inside */
+    }
+
+    .custom-prev img,
+    .custom-next img {
+        width: 16px;
+        height: 16px;
+    }
+}

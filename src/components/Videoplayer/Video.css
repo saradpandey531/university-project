@@ -1,0 +1,38 @@
+.Video_player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* FULL SCREEN VIDEO */
+.fullscreen-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+
+/*  CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    font-size: 22px;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
